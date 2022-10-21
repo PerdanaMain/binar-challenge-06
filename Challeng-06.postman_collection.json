@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "b6c6fe5f-becd-476e-b642-bcbf07762da8",
+		"name": "Challeng-06",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23536168"
+	},
+	"item": [
+		{
+			"name": "Users Controller",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsIm5hbWUiOiJzYXlhIHN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6Imtlb25nIiwicm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2NjYxNjUwNDEsImV4cCI6MTY2NjE2NTA1Nn0.dpk2_S-6MnX0ojiXHRHVOffsJSOtoeDFxlFwQfoldEQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"bana\",\r\n    \"username\":\"bana\",\r\n    \"password\":\"bana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/adm/regist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"adm",
+								"regist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"bono\",\r\n    \"password\":\"bono\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"saya superadmin\",\r\n    \"username\":\"keong\",\r\n    \"password\":\"super\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/regist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"regist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJkaW1hcyBtaXJ6YSIsInVzZXJuYW1lIjoiZGltYXMyMiIsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE2NjYxNTk5MzAsImV4cCI6MTY2NjE1OTk5MH0.r6KmIbMtKBBjakQ4VvhpTeZ7iR_BbK4ceL-oYl-Htgo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dimas22\",\r\n    \"password\":\"dimas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJmaXJtYW4gcGVyZGFuYSIsInVzZXJuYW1lIjoiZmlybWFuIiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTY2NjMxNjAxMSwiZXhwIjoxNjY2MzE2MDcxfQ.UG1kMsHD_GBCGQNshZbdOIqtDYtj_1MarGe-8mhXVp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dimas22\",\r\n    \"password\":\"dimas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Lists",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJib25vIiwidXNlcm5hbWUiOiJib25vIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY2MzM0MjUyLCJleHAiOjE2NjYzMzQyNjd9.xPp8wERMkouTYSU3jFg4r76k28aSBjj_79_HoTwLPO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car Controller",
+			"item": [
+				{
+					"name": "Get Cars",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJib25vIiwidXNlcm5hbWUiOiJib25vIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY2MzM3NjE5LCJleHAiOjE2NjY0MjQwMTl9.RJzHrSVBgQZDH3dZavyKx2EJ_ZPfogGBj0JHsleEdkE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/getcars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getcars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJib25vIiwidXNlcm5hbWUiOiJib25vIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY2MzM3NjE5LCJleHAiOjE2NjY0MjQwMTl9.RJzHrSVBgQZDH3dZavyKx2EJ_ZPfogGBj0JHsleEdkE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Nissan juke\",\r\n    \"price\":\"90909090\",\r\n    \"type\":\"Big SUV\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/createcar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"createcar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJib25vIiwidXNlcm5hbWUiOiJib25vIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY2MzM3NjE5LCJleHAiOjE2NjY0MjQwMTl9.RJzHrSVBgQZDH3dZavyKx2EJ_ZPfogGBj0JHsleEdkE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Brio - updated\",\r\n    \"price\":\"12300000\",\r\n    \"type\":\"Small Hatchback\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/updatecar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"updatecar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJib25vIiwidXNlcm5hbWUiOiJib25vIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY2MzM3NjE5LCJleHAiOjE2NjY0MjQwMTl9.RJzHrSVBgQZDH3dZavyKx2EJ_ZPfogGBj0JHsleEdkE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/deletecar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"deletecar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

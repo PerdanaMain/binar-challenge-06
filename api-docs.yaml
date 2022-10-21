@@ -1,0 +1,311 @@
+{
+  "swagger": "2.0",
+  "info": { "version": "1.0", "title": "Challeng-06", "contact": {} },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "securityDefinitions": {},
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths":
+    {
+      "/adm/regist":
+        {
+          "post":
+            {
+              "summary": "Register Admin",
+              "tags": ["Users Controller"],
+              "operationId": "RegisterAdmin",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/RegisterAdminRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/login":
+        {
+          "post":
+            {
+              "summary": "Login",
+              "tags": ["Users Controller"],
+              "operationId": "Login",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string",
+                  },
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/LoginRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+            },
+        },
+      "/regist":
+        {
+          "post":
+            {
+              "summary": "Regist",
+              "tags": ["Users Controller"],
+              "operationId": "Regist",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string",
+                  },
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/RegistRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+            },
+        },
+      "/logout":
+        {
+          "delete":
+            {
+              "summary": "Logout",
+              "tags": ["Users Controller"],
+              "operationId": "Logout",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/LogoutRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/token":
+        {
+          "get":
+            {
+              "summary": "Get Token",
+              "tags": ["Users Controller"],
+              "operationId": "GetToken",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters": [],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/users":
+        {
+          "get":
+            {
+              "summary": "User Lists",
+              "tags": ["Users Controller"],
+              "operationId": "UserLists",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters": [],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/getcars":
+        {
+          "get":
+            {
+              "summary": "Get Cars",
+              "tags": ["Car Controller"],
+              "operationId": "GetCars",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters": [],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/createcar":
+        {
+          "post":
+            {
+              "summary": "Create Car",
+              "tags": ["Car Controller"],
+              "operationId": "CreateCar",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/CreateCarRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/updatecar/2":
+        {
+          "put":
+            {
+              "summary": "Update Car",
+              "tags": ["Car Controller"],
+              "operationId": "UpdateCar",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters":
+                [
+                  {
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": { "$ref": "#/definitions/UpdateCarRequest" },
+                  },
+                ],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+      "/deletecar/3":
+        {
+          "delete":
+            {
+              "summary": "Delete Car",
+              "tags": ["Car Controller"],
+              "operationId": "DeleteCar",
+              "deprecated": false,
+              "produces": ["application/json"],
+              "parameters": [],
+              "responses": { "200": { "description": "", "headers": {} } },
+              "security": [],
+            },
+        },
+    },
+  "definitions":
+    {
+      "RegisterAdminRequest":
+        {
+          "title": "RegisterAdminRequest",
+          "example": { "name": "bana", "username": "bana", "password": "bana" },
+          "type": "object",
+          "properties":
+            {
+              "name": { "type": "string" },
+              "username": { "type": "string" },
+              "password": { "type": "string" },
+            },
+          "required": ["name", "username", "password"],
+        },
+      "LoginRequest":
+        {
+          "title": "LoginRequest",
+          "example": { "username": "bono", "password": "bono" },
+          "type": "object",
+          "properties":
+            {
+              "username": { "type": "string" },
+              "password": { "type": "string" },
+            },
+          "required": ["username", "password"],
+        },
+      "RegistRequest":
+        {
+          "title": "RegistRequest",
+          "example":
+            {
+              "name": "saya superadmin",
+              "username": "keong",
+              "password": "super",
+            },
+          "type": "object",
+          "properties":
+            {
+              "name": { "type": "string" },
+              "username": { "type": "string" },
+              "password": { "type": "string" },
+            },
+          "required": ["name", "username", "password"],
+        },
+      "LogoutRequest":
+        {
+          "title": "LogoutRequest",
+          "example": { "username": "dimas22", "password": "dimas" },
+          "type": "object",
+          "properties":
+            {
+              "username": { "type": "string" },
+              "password": { "type": "string" },
+            },
+          "required": ["username", "password"],
+        },
+      "CreateCarRequest":
+        {
+          "title": "CreateCarRequest",
+          "example":
+            { "name": "Nissan juke", "price": "90909090", "type": "Big SUV" },
+          "type": "object",
+          "properties":
+            {
+              "name": { "type": "string" },
+              "price": { "type": "string" },
+              "type": { "type": "string" },
+            },
+          "required": ["name", "price", "type"],
+        },
+      "UpdateCarRequest":
+        {
+          "title": "UpdateCarRequest",
+          "example":
+            {
+              "name": "Brio - updated",
+              "price": "12300000",
+              "type": "Small Hatchback",
+            },
+          "type": "object",
+          "properties":
+            {
+              "name": { "type": "string" },
+              "price": { "type": "string" },
+              "type": { "type": "string" },
+            },
+          "required": ["name", "price", "type"],
+        },
+    },
+  "security": [],
+  "tags": [{ "name": "Users Controller" }, { "name": "Car Controller" }],
+}

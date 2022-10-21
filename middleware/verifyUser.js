@@ -12,6 +12,9 @@ export const verifyUser = (req, res, next) => {
     console.log(req.role);
     if (req.role === "member")
       return res.status(401).json({ msg: "Sorry, Member not allowed" });
+
+    // const user = { username: req.username, role: req.role };
+    // next(res.json(user));
     next();
   });
 };

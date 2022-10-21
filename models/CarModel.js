@@ -15,10 +15,10 @@ const Cars = db.define(
     type: {
       type: DataTypes.STRING,
     },
-    image: {
+    createdBy: {
       type: DataTypes.STRING,
     },
-    url: {
+    updatedBy: {
       type: DataTypes.STRING,
     },
   },
